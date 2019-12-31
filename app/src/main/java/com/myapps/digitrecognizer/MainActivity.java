@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         String s = "Unable to identify digit";
         if (recognition != null) {
-            s = "You wrote " + recognition.getDigit() + ". I am " + (int) (Math.round(recognition.getProb() * 100)) + "% sure.";
+            s = "You wrote " + recognition.getDigit() + ". I am " + Math.round(recognition.getProb() * 100) + "% sure.";
         }
-
 
         Log.i("Paint", s);
         textView.setText(s);
